@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Cart</title>
+    <title>html 2</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
@@ -11,45 +12,41 @@
 
 </head>
 <body>
-    <header class="px-6 py-6">
+    <header class="px-3">
         <div class="bg-yellow-400 flex justify-between items-center p-4 mt-8 mb-8"> 
             <div class="bg-white rounded">
                 <p class="uppercase font-bold text-5xl text-yellow-400 p-2">Cart</p>
             </div>
             <div class="flex justify-between items-center bg-white px-2 py-3 w-24 rounded">
-                <i class="fa-solid fa-cart-shopping text-yellow-400 fa-2xl"></i>
-                <p id="count" class="flex justify-center items-center bg-yellow-400 font-bold text-xl rounded-full w-7 h-7 text-white">0</p>
+                <button id="open-sidebar">
+                    <i class="fa-solid fa-cart-shopping text-yellow-400 fa-2xl"></i>
+                </button>
+                <p id="count" class="flex justify-center items-center bg-yellow-400 font-bold text-xl rounded-full w-7 h-7 text-white cursor-not-allowed">0</p>
             </div>
         </div>
 
-        <!-- total body container -->
 
-        <div class="container flex justify-between mb-8">
-
-            <!-- product cart -->
-
-            <div id="root" class=" grid grid-cols-3 gap-6"></div>
+        <!-- product cart -->
+         <div id="root" class="grid grid-cols-4 gap-6"></div>
 
 
-            <!-- sidebar cart -->
-
-            <div class="sidebar w-96 rounded bg-white shadow-2xl shadow-gray-500 ml-5 p-4 items-center">
-
-                <div class="head bg-yellow-400 rounded h-10 p-2.5 mb-5 text-2xl font-bold text-white flex items-center">
-                    <p>My Cart</p>
-                </div>
-
-                <div class="border-b border-gray-500 pb-3 mb-2">
-                    <p id="cartItem" class="text-center">Your Cart is empty</p>
-                </div>
-
-                <div class="foot flex justify-between font-bold text-xl">
-                    <h3 class="">Total</h3>
-                    <h2 id="total">$ 0.00</h2>
-                </div>
-
+        <!-- sidebar cart -->
+          <div id="show-sidebar" class="show-sidebar top-0 fixed bg-red-600 text-white w-96 -right-full h-full p-4">
+            <div class="flex justify-between items-center ">
+                <p class="bg-yellow-400 text-white text-xl font-bold w-full rounded p-2 m-3">my cart</p>
+                <button id="close-sidebar">
+                    <i class="fa-solid fa-xmark fa-xl"></i>
+                </button>
             </div>
-        </div>
+            <div class="border-b border-yellow-400 pb-4 mb-3 text-center text-white">
+                <p id="cartItem">Your cart is empty</p>
+            </div>
+            <div class="flex justify-between font-bold text-xl text-white">
+                <h1>Total</h1>
+                <p id="total" class="cursor-not-allowed">$ 0.00</p>
+            </div>
+          </div>
+
     </header>
 </body>
     <script src="cart.js"></script>
